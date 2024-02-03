@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Search</title>
+    <title>Google</title>
     <style>
         * {
             margin : 0;
@@ -12,6 +12,10 @@
         }
         body {
             font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            /* background-color: salmon; */
+            padding: 30px;
         }
         h1 {
             margin-bottom : 10px;
@@ -42,12 +46,108 @@
             width: 36px;
             background-color: rgba(255, 255, 0, 0.803);
             cursor : pointer;
-            border : none; 
+            border : none;
+        }
+        header nav {
+            float : right;
+            height: 60px;
+            /* background-color: aquamarine; */
+            width : fit-content;
+            line-height: 60px;
+        }
+        header nav a {
+            font-size : 18pt;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            margin-left : 30px;
+        }
+        header div.profile-picture {
+            float : right;
+            width : 60px;
+            height : 60px;
+            border-radius: 30px;
+            background-color: gray;
+            margin-left : 30px;
+            background-image : url(Screenshot\ 2023-09-22\ 214154.png);
+            background-position: center center;
+            background-repeat : no-repeat;
+            background-size : cover;
+        }
+        section.content h1 {
+            font-size : 60px;
+            margin-bottom : 10px;
+            text-align: center;
+            margin-top : 100px;
+        }
+        section.content form {
+            width : 800px;
+            /* background-color: yellow; */
+            text-align: center;
+            margin : 0px auto;
+        }
+        section.content form div {
+            display : inline-block;
+            border : 1px solid black ;
+            padding : 5px 10px;
+            height : 36px;
+            border-radius : 18px;
+        }
+        section.content form input[type=text]{
+            border : none;
+            outline : none;
+            width : 500px;
+        }
+        section.content form input[type=submit] {
+            height : 36px;
+            width : 36px;
+            border-radius: 18px;
+            background-color: magenta;
+            border : none;
+            cursor : pointer;
+        }
+        @media screen and (max-width : 670px) {
+            header nav {
+                float : left;
+
+            }
+            header nav a {
+                margin : 0 5px 0 0;
+                font-size : 12pt;
+            }
+            header nav a.icon {
+                display : none;
+            }  
+            section.content form {
+                width : 90%;
+            }
+            section.content form input[type=text]{
+                width : 250px;
+            }
+            section.content form input[type=submit] {
+                display : none;
+            }
+            span.icon-search {
+                display : none;
+            }
         }
     </style>
 </head>
 <body>
-    <h1><span style="color : aqua">G</span><span style="color : aquamarine">o</span>ogle</h1>
+    <header>
+    <div class="profile-picture"></div>
+    <nav>
+        <a href="https://www.google.com/gmail/about/">Gmail</a>
+        <a href="https://www.google.com/imghp?hl=en&tab=ri&ogbl">Images</a>
+        <!-- <a href="https://labs.google.com/search/login?source=ntp&is=so" class="icon-lab">🧪</a>
+        <a href="#" class="icon">📦</a> -->
+        <a href="#" class="profile-picture"></a>
+    </nav>
+    <section  style="clear : right;"></section>
+    </header>
+<section class="content">
+
+    <h1><span style="color : rgb(62, 62, 228)">G</span><span style="color : red">o</span><span style="color : yellow">o</span><span style="color : blue">g</span><span style="color : lime">l</span><span style="color : red">e</span></h1>
     <form action="https://www.google.com/search" target="_blank">
         <div>
             <span class="icon-search">🔎</span>
@@ -56,4 +156,4 @@
         <input type="submit" value="🤔">
     </form>
 </body>
-</html>
+</section>
